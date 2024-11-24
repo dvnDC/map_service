@@ -1,0 +1,18 @@
+networks:
+  app-network:
+    driver: bridge
+
+services:
+  web:
+    build: .
+    command: bash -c "bin/rails server -b 0.0.0.0"
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+    environment:
+      RAILS_ENV: development
+    volumes:
+      - ./app/assets/images:/rails/app/assets/images
+    user: "root"
+
