@@ -9,6 +9,9 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 gem "mini_magick"
 gem 'rack-cors', require: 'rack/cors'
+gem 'wash_out'
+gem 'rexml'
+
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
