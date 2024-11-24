@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       post 'map/cutout', to: 'map#cutout'
+      get 'map/wsdl', to: 'map#wsdl'
     end
   end
 
