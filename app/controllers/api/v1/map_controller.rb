@@ -1,6 +1,5 @@
 class Api::V1::MapController < ApplicationController
   require 'mini_magick'
-  require 'savon'
 
   def cutout
     x1, y1, x2, y2 = params[:x1].to_i, params[:y1].to_i, params[:x2].to_i, params[:y2].to_i
