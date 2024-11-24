@@ -31,7 +31,8 @@ RUN gem install bundler:2.5.23
 
 # Install application gems
 COPY Gemfile Gemfile.lock ./
-RUN bundle _2.5.23_ install && \
+RUN bundle _2.5.23_ config set frozen false && \
+    bundle _2.5.23_ install && \
     rm -rf ~/.bundle/ "${BUNDLE_PATH}"/ruby/*/cache "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git && \
     bundle exec bootsnap precompile --gemfile
 
